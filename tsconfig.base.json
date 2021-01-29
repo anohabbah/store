@@ -15,7 +15,7 @@
     "lib": ["es7", "dom"],
     "baseUrl": "./",
     "paths": {
-      "app/*": ["src/main/webapp/app/*"]
+      "@store/*": ["src/main/webapp/app/*"]
     },
     "importHelpers": true,
     "downlevelIteration": true,

@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { SERVER_API_URL } from 'app/app.constants';
-import { IUser } from 'app/core/user/user.model';
+import { SERVER_API_URL } from '@store/app.constants';
+import { IUser } from '@store/core/user/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class RegisterService {

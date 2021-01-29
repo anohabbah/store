@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import './vendor';
-import { StoreSharedModule } from 'app/shared/shared.module';
-import { StoreCoreModule } from 'app/core/core.module';
+import { StoreSharedModule } from '@store/shared/shared.module';
+import { StoreCoreModule } from '@store/core/core.module';
 import { StoreAppRoutingModule } from './app-routing.module';
 import { StoreHomeModule } from './home/home.module';
 import { StoreEntityModule } from './entities/entity.module';

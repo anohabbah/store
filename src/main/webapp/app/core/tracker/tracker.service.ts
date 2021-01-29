@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { Location } from '@angular/common';
-import { Router, NavigationEnd, Event } from '@angular/router';
-import { Subscription, ReplaySubject, Subject } from 'rxjs';
+import { Event, NavigationEnd, Router } from '@angular/router';
+import { ReplaySubject, Subject, Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
 import * as SockJS from 'sockjs-client';
 import * as Stomp from 'webstomp-client';
 
-import { AuthServerProvider } from 'app/core/auth/auth-jwt.service';
+import { AuthServerProvider } from '@store/core/auth/auth-jwt.service';
 import { TrackerActivity } from './tracker-activity.model';
 
 @Injectable({ providedIn: 'root' })
