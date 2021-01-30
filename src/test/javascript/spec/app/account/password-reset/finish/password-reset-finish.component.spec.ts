@@ -5,8 +5,8 @@ import { ActivatedRoute } from '@angular/router';
 import { of, throwError } from 'rxjs';
 
 import { StoreTestModule } from '../../../../test.module';
-import { PasswordResetFinishComponent } from 'app/account/password-reset/finish/password-reset-finish.component';
-import { PasswordResetFinishService } from 'app/account/password-reset/finish/password-reset-finish.service';
+import { PasswordResetFinishComponent } from '@store/account/password-reset/finish/password-reset-finish.component';
+import { PasswordResetFinishService } from '@store/account/password-reset/finish/password-reset-finish.service';
 import { MockActivatedRoute } from '../../../../helpers/mock-route.service';
 
 describe('Component Tests', () => {

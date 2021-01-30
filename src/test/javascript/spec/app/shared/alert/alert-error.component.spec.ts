@@ -4,7 +4,7 @@ import { JhiAlertService, JhiEventManager } from 'ng-jhipster';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { StoreTestModule } from '../../../test.module';
-import { AlertErrorComponent } from 'app/shared/alert/alert-error.component';
+import { AlertErrorComponent } from '@store/shared/alert/alert-error.component';
 import { MockAlertService } from '../../../helpers/mock-alert.service';
 
 describe('Component Tests', () => {

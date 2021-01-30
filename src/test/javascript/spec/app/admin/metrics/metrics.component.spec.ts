@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { MetricsComponent } from 'app/admin/metrics/metrics.component';
-import { MetricsService } from 'app/admin/metrics/metrics.service';
+import { MetricsComponent } from '@store/admin/metrics/metrics.component';
+import { MetricsService } from '@store/admin/metrics/metrics.service';
 
 describe('Component Tests', () => {
   describe('MetricsComponent', () => {

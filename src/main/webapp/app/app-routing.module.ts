@@ -2,10 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { errorRoute } from './layouts/error/error.route';
 import { navbarRoute } from './layouts/navbar/navbar.route';
-import { DEBUG_INFO_ENABLED } from 'app/app.constants';
-import { Authority } from 'app/shared/constants/authority.constants';
+import { DEBUG_INFO_ENABLED } from '@store/app.constants';
+import { Authority } from '@store/shared/constants/authority.constants';
 
-import { UserRouteAccessService } from 'app/core/auth/user-route-access-service';
+import { UserRouteAccessService } from '@store/core/auth/user-route-access-service';
 
 const LAYOUT_ROUTES = [navbarRoute, ...errorRoute];
 

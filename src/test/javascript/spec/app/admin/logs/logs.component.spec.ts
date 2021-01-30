@@ -2,9 +2,9 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { LogsComponent } from 'app/admin/logs/logs.component';
-import { LogsService } from 'app/admin/logs/logs.service';
-import { Log } from 'app/admin/logs/log.model';
+import { LogsComponent } from '@store/admin/logs/logs.component';
+import { LogsService } from '@store/admin/logs/logs.service';
+import { Log } from '@store/admin/logs/log.model';
 
 describe('Component Tests', () => {
   describe('LogsComponent', () => {

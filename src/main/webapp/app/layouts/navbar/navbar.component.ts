@@ -3,12 +3,12 @@ import { Router } from '@angular/router';
 import { JhiLanguageService } from 'ng-jhipster';
 import { SessionStorageService } from 'ngx-webstorage';
 
-import { VERSION } from 'app/app.constants';
-import { LANGUAGES } from 'app/core/language/language.constants';
-import { AccountService } from 'app/core/auth/account.service';
-import { LoginModalService } from 'app/core/login/login-modal.service';
-import { LoginService } from 'app/core/login/login.service';
-import { ProfileService } from 'app/layouts/profiles/profile.service';
+import { VERSION } from '@store/app.constants';
+import { LANGUAGES } from '@store/core/language/language.constants';
+import { AccountService } from '@store/core/auth/account.service';
+import { LoginModalService } from '@store/core/login/login-modal.service';
+import { LoginService } from '@store/core/login/login.service';
+import { ProfileService } from '@store/layouts/profiles/profile.service';
 
 @Component({
   selector: 'jhi-navbar',

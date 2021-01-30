@@ -4,8 +4,8 @@ import { FormBuilder } from '@angular/forms';
 import { of, throwError } from 'rxjs';
 
 import { StoreTestModule } from '../../../../test.module';
-import { PasswordResetInitComponent } from 'app/account/password-reset/init/password-reset-init.component';
-import { PasswordResetInitService } from 'app/account/password-reset/init/password-reset-init.service';
+import { PasswordResetInitComponent } from '@store/account/password-reset/init/password-reset-init.component';
+import { PasswordResetInitService } from '@store/account/password-reset/init/password-reset-init.service';
 
 describe('Component Tests', () => {
   describe('PasswordResetInitComponent', () => {

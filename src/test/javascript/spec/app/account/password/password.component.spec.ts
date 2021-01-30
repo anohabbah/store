@@ -4,8 +4,8 @@ import { FormBuilder } from '@angular/forms';
 import { of, throwError } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { PasswordComponent } from 'app/account/password/password.component';
-import { PasswordService } from 'app/account/password/password.service';
+import { PasswordComponent } from '@store/account/password/password.component';
+import { PasswordService } from '@store/account/password/password.service';
 
 describe('Component Tests', () => {
   describe('PasswordComponent', () => {

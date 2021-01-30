@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { LoginModalService } from 'app/core/login/login-modal.service';
+import { LoginModalService } from '@store/core/login/login-modal.service';
 
 // Mock class for NgbModalRef
 export class MockNgbModalRef {

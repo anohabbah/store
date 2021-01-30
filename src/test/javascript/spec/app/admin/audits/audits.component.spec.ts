@@ -5,10 +5,10 @@ import { of } from 'rxjs';
 import { advanceTo } from 'jest-date-mock';
 
 import { StoreTestModule } from '../../../test.module';
-import { AuditsComponent } from 'app/admin/audits/audits.component';
-import { AuditsService } from 'app/admin/audits/audits.service';
-import { Audit } from 'app/admin/audits/audit.model';
-import { ITEMS_PER_PAGE } from 'app/shared/constants/pagination.constants';
+import { AuditsComponent } from '@store/admin/audits/audits.component';
+import { AuditsService } from '@store/admin/audits/audits.service';
+import { Audit } from '@store/admin/audits/audit.model';
+import { ITEMS_PER_PAGE } from '@store/shared/constants/pagination.constants';
 import { MockRouter, MockActivatedRoute } from '../../../helpers/mock-route.service';
 
 function build2DigitsDatePart(datePart: number): string {

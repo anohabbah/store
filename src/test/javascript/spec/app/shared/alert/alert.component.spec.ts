@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { JhiAlertService } from 'ng-jhipster';
 
 import { StoreTestModule } from '../../../test.module';
-import { AlertComponent } from 'app/shared/alert/alert.component';
+import { AlertComponent } from '@store/shared/alert/alert.component';
 
 describe('Component Tests', () => {
   describe('Alert Component', () => {

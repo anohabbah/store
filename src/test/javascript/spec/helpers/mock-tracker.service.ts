@@ -1,7 +1,7 @@
 import Spy = jasmine.Spy;
 
 import { SpyObject } from './spyobject';
-import { TrackerService } from 'app/core/tracker/tracker.service';
+import { TrackerService } from '@store/core/tracker/tracker.service';
 
 export class MockTrackerService extends SpyObject {
   connectSpy: Spy;

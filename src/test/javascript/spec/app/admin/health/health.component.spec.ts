@@ -3,8 +3,8 @@ import { HttpErrorResponse } from '@angular/common/http';
 import { of, throwError } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { HealthComponent } from 'app/admin/health/health.component';
-import { HealthService, Health } from 'app/admin/health/health.service';
+import { HealthComponent } from '@store/admin/health/health.component';
+import { HealthService, Health } from '@store/admin/health/health.service';
 
 describe('Component Tests', () => {
   describe('HealthComponent', () => {

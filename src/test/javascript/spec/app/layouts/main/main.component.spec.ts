@@ -4,7 +4,7 @@ import { Title } from '@angular/platform-browser';
 import { Subject, of } from 'rxjs';
 import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
-import { MainComponent } from 'app/layouts/main/main.component';
+import { MainComponent } from '@store/layouts/main/main.component';
 import { StoreTestModule } from '../../../test.module';
 import { MockRouter } from '../../../helpers/mock-route.service';
 

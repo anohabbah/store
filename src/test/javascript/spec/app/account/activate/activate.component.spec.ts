@@ -4,8 +4,8 @@ import { of, throwError } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
 import { MockActivatedRoute } from '../../../helpers/mock-route.service';
-import { ActivateService } from 'app/account/activate/activate.service';
-import { ActivateComponent } from 'app/account/activate/activate.component';
+import { ActivateService } from '@store/account/activate/activate.service';
+import { ActivateComponent } from '@store/account/activate/activate.component';
 
 describe('Component Tests', () => {
   describe('ActivateComponent', () => {

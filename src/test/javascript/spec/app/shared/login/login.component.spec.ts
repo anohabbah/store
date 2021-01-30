@@ -3,8 +3,8 @@ import { FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { LoginService } from 'app/core/login/login.service';
-import { LoginModalComponent } from 'app/shared/login/login.component';
+import { LoginService } from '@store/core/login/login.service';
+import { LoginModalComponent } from '@store/shared/login/login.component';
 import { StoreTestModule } from '../../../test.module';
 import { MockLoginService } from '../../../helpers/mock-login.service';
 import { MockRouter } from '../../../helpers/mock-route.service';

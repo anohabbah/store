@@ -3,9 +3,9 @@ import { FormBuilder } from '@angular/forms';
 import { throwError, of } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { AccountService } from 'app/core/auth/account.service';
-import { Account } from 'app/core/user/account.model';
-import { SettingsComponent } from 'app/account/settings/settings.component';
+import { AccountService } from '@store/core/auth/account.service';
+import { Account } from '@store/core/user/account.model';
+import { SettingsComponent } from '@store/account/settings/settings.component';
 import { MockAccountService } from '../../../helpers/mock-account.service';
 
 describe('Component Tests', () => {

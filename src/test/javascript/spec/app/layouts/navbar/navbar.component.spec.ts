@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { StoreTestModule } from '../../../test.module';
-import { ProfileInfo } from 'app/layouts/profiles/profile-info.model';
-import { NavbarComponent } from 'app/layouts/navbar/navbar.component';
-import { AccountService } from 'app/core/auth/account.service';
-import { ProfileService } from 'app/layouts/profiles/profile.service';
+import { ProfileInfo } from '@store/layouts/profiles/profile-info.model';
+import { NavbarComponent } from '@store/layouts/navbar/navbar.component';
+import { AccountService } from '@store/core/auth/account.service';
+import { ProfileService } from '@store/layouts/profiles/profile.service';
 
 describe('Component Tests', () => {
   describe('Navbar Component', () => {

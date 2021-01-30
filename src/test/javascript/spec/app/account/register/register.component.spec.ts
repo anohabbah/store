@@ -5,9 +5,9 @@ import { JhiLanguageService } from 'ng-jhipster';
 
 import { MockLanguageService } from '../../../helpers/mock-language.service';
 import { StoreTestModule } from '../../../test.module';
-import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from 'app/shared/constants/error.constants';
-import { RegisterService } from 'app/account/register/register.service';
-import { RegisterComponent } from 'app/account/register/register.component';
+import { EMAIL_ALREADY_USED_TYPE, LOGIN_ALREADY_USED_TYPE } from '@store/shared/constants/error.constants';
+import { RegisterService } from '@store/account/register/register.service';
+import { RegisterComponent } from '@store/account/register/register.component';
 
 describe('Component Tests', () => {
   describe('RegisterComponent', () => {
