@@ -84,10 +84,10 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="form-control-label" jhiTranslate="storeApp.product.productCategory" for="field_productCategory">Product Category</label>
-                    <select class="form-control" id="field_productCategory" name="productCategory" formControlName="productCategory">
+                    <label class="form-control-label" jhiTranslate="storeApp.product.category" for="field_category">Category</label>
+                    <select class="form-control" id="field_category" name="category" formControlName="category">
                         <option [ngValue]="null"></option>
-                        <option [ngValue]="productCategoryOption.id === editForm.get('productCategory')!.value?.id ? editForm.get('productCategory')!.value : productCategoryOption" *ngFor="let productCategoryOption of productcategories; trackBy: trackById">{{ productCategoryOption.id }}</option>
+                        <option [ngValue]="productCategoryOption.id === editForm.get('category')!.value?.id ? editForm.get('category')!.value : productCategoryOption" *ngFor="let productCategoryOption of productcategories; trackBy: trackById">{{ productCategoryOption.id }}</option>
                     </select>
                 </div>
             </div>

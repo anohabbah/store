@@ -29,7 +29,7 @@
       "relationshipType": "one-to-many",
       "otherEntityName": "orderItem",
       "otherEntityRelationshipName": "order",
-      "relationshipName": "orderItem"
+      "relationshipName": "item"
     },
     {
       "relationshipType": "one-to-many",

@@ -31,7 +31,7 @@ public class ProductCategory implements Serializable {
     @Column(name = "description")
     private String description;
 
-    @OneToMany(mappedBy = "productCategory")
+    @OneToMany(mappedBy = "category")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
     private Set<Product> products = new HashSet<>();
 
@@ -81,13 +81,13 @@ public class ProductCategory implements Serializable {
 
     public ProductCategory addProduct(Product product) {
         this.products.add(product);
-        product.setProductCategory(this);
+        product.setCategory(this);
         return this;
     }
 
     public ProductCategory removeProduct(Product product) {
         this.products.remove(product);
-        product.setProductCategory(null);
+        product.setCategory(null);
         return this;
     }
 

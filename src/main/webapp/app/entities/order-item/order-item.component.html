@@ -2,7 +2,7 @@
     <h2 id="page-heading">
         <span jhiTranslate="storeApp.orderItem.home.title">Order Items</span>
 
-        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-order-item" [routerLink]="['/order-items/new']">
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-order-item" [routerLink]="['/order-item/new']">
             <fa-icon icon="plus"></fa-icon>
             <span  jhiTranslate="storeApp.orderItem.home.createLabel">
             Create a new Order Item
@@ -33,24 +33,24 @@
             </thead>
             <tbody>
                 <tr *ngFor="let orderItem of orderItems ;trackBy: trackId">
-                    <td><a [routerLink]="['/order-items', orderItem.id, 'view']">{{ orderItem.id }}</a></td>
+                    <td><a [routerLink]="['/order-item', orderItem.id, 'view']">{{ orderItem.id }}</a></td>
                     <td>{{ orderItem.quantity }}</td>
                     <td>{{ orderItem.totalPrice }}</td>
                     <td jhiTranslate="{{ 'storeApp.OrderItemStatus.' + orderItem.status }}">{{ orderItem.status }}</td>
                     <td>
                         <div *ngIf="orderItem.product">
-                            <a [routerLink]="['/products', orderItem.product?.id, 'view']" >{{ orderItem.product?.id }}</a>
+                            <a [routerLink]="['/product', orderItem.product?.id, 'view']" >{{ orderItem.product?.id }}</a>
                         </div>
                     </td>
                     <td>
                         <div *ngIf="orderItem.order">
-                            <a [routerLink]="['/orders', orderItem.order?.id, 'view']" >{{ orderItem.order?.id }}</a>
+                            <a [routerLink]="['/product-order', orderItem.order?.id, 'view']" >{{ orderItem.order?.id }}</a>
                         </div>
                     </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"
-                                    [routerLink]="['/order-items', orderItem.id, 'view']"
+                                    [routerLink]="['/order-item', orderItem.id, 'view']"
                                     class="btn btn-info btn-sm">
                                 <fa-icon icon="eye"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>

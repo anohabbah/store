@@ -19,7 +19,7 @@
       "placedDate": "Placed Date",
       "status": "Status",
       "code": "Code",
-      "orderItem": "Order Item",
+      "item": "Item",
       "invoice": "Invoice",
       "customer": "Customer"
     }

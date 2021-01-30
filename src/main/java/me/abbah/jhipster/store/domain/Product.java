@@ -53,7 +53,7 @@ public class Product implements Serializable {
 
     @ManyToOne
     @JsonIgnoreProperties(value = "products", allowSetters = true)
-    private ProductCategory productCategory;
+    private ProductCategory category;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -142,17 +142,17 @@ public class Product implements Serializable {
         this.imageContentType = imageContentType;
     }
 
-    public ProductCategory getProductCategory() {
-        return productCategory;
+    public ProductCategory getCategory() {
+        return category;
     }
 
-    public Product productCategory(ProductCategory productCategory) {
-        this.productCategory = productCategory;
+    public Product category(ProductCategory productCategory) {
+        this.category = productCategory;
         return this;
     }
 
-    public void setProductCategory(ProductCategory productCategory) {
-        this.productCategory = productCategory;
+    public void setCategory(ProductCategory productCategory) {
+        this.category = productCategory;
     }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 

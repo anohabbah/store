@@ -39,7 +39,7 @@
     {
       "relationshipType": "many-to-one",
       "otherEntityName": "productOrder",
-      "otherEntityRelationshipName": "orderItem",
+      "otherEntityRelationshipName": "item",
       "relationshipName": "order",
       "otherEntityField": "id"
     }

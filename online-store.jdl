@@ -69,10 +69,10 @@ relationship ManyToOne { OrderItem{product} to Product }
 
 relationship OneToMany {
 	Customer{order} to ProductOrder{customer},
-	ProductOrder{orderItem} to OrderItem{order},
+	ProductOrder{item} to OrderItem{order},
 	ProductOrder{invoice} to Invoice{order},
 	Invoice{shipment} to Shipment{invoice},
-	ProductCategory{product} to Product{productCategory}
+	ProductCategory{product} to Product{category}
 }
 
 service * with serviceClass

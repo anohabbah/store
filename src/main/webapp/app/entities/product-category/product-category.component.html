@@ -2,7 +2,7 @@
     <h2 id="page-heading">
         <span jhiTranslate="storeApp.productCategory.home.title">Product Categories</span>
 
-        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-product-category" [routerLink]="['/product-categories/new']">
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-product-category" [routerLink]="['/product-category/new']">
             <fa-icon icon="plus"></fa-icon>
             <span  jhiTranslate="storeApp.productCategory.home.createLabel">
             Create a new Product Category
@@ -30,20 +30,20 @@
             </thead>
             <tbody>
                 <tr *ngFor="let productCategory of productCategories ;trackBy: trackId">
-                    <td><a [routerLink]="['/product-categories', productCategory.id, 'view']">{{ productCategory.id }}</a></td>
+                    <td><a [routerLink]="['/product-category', productCategory.id, 'view']">{{ productCategory.id }}</a></td>
                     <td>{{ productCategory.name }}</td>
                     <td>{{ productCategory.description }}</td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"
-                                    [routerLink]="['/product-categories', productCategory.id, 'view']"
+                                    [routerLink]="['/product-category', productCategory.id, 'view']"
                                     class="btn btn-info btn-sm">
                                 <fa-icon icon="eye"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
                             </button>
 
                             <button type="submit"
-                                    [routerLink]="['/product-categories', productCategory.id, 'edit']"
+                                    [routerLink]="['/product-category', productCategory.id, 'edit']"
                                     class="btn btn-primary btn-sm">
                                 <fa-icon icon="pencil-alt"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>

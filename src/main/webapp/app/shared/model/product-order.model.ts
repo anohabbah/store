@@ -9,7 +9,7 @@ export interface IProductOrder {
   placedDate?: Moment;
   status?: OrderStatus;
   code?: string;
-  orderItems?: IOrderItem[];
+  items?: IOrderItem[];
   invoices?: IInvoice[];
   customer?: ICustomer;
 }
@@ -20,7 +20,7 @@ export class ProductOrder implements IProductOrder {
     public placedDate?: Moment,
     public status?: OrderStatus,
     public code?: string,
-    public orderItems?: IOrderItem[],
+    public items?: IOrderItem[],
     public invoices?: IInvoice[],
     public customer?: ICustomer
   ) {}

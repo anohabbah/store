@@ -17,7 +17,7 @@
     {
       "relationshipType": "one-to-many",
       "otherEntityName": "product",
-      "otherEntityRelationshipName": "productCategory",
+      "otherEntityRelationshipName": "category",
       "relationshipName": "product"
     }
   ],

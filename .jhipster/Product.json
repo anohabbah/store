@@ -40,7 +40,7 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "productCategory",
       "otherEntityRelationshipName": "product",
-      "relationshipName": "productCategory",
+      "relationshipName": "category",
       "otherEntityField": "id"
     }
   ],

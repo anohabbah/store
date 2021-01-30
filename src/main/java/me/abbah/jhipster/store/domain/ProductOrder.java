@@ -43,7 +43,7 @@ public class ProductOrder implements Serializable {
 
     @OneToMany(mappedBy = "order")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
-    private Set<OrderItem> orderItems = new HashSet<>();
+    private Set<OrderItem> items = new HashSet<>();
 
     @OneToMany(mappedBy = "order")
     @Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
@@ -101,29 +101,29 @@ public class ProductOrder implements Serializable {
         this.code = code;
     }
 
-    public Set<OrderItem> getOrderItems() {
-        return orderItems;
+    public Set<OrderItem> getItems() {
+        return items;
     }
 
-    public ProductOrder orderItems(Set<OrderItem> orderItems) {
-        this.orderItems = orderItems;
+    public ProductOrder items(Set<OrderItem> orderItems) {
+        this.items = orderItems;
         return this;
     }
 
-    public ProductOrder addOrderItem(OrderItem orderItem) {
-        this.orderItems.add(orderItem);
+    public ProductOrder addItem(OrderItem orderItem) {
+        this.items.add(orderItem);
         orderItem.setOrder(this);
         return this;
     }
 
-    public ProductOrder removeOrderItem(OrderItem orderItem) {
-        this.orderItems.remove(orderItem);
+    public ProductOrder removeItem(OrderItem orderItem) {
+        this.items.remove(orderItem);
         orderItem.setOrder(null);
         return this;
     }
 
-    public void setOrderItems(Set<OrderItem> orderItems) {
-        this.orderItems = orderItems;
+    public void setItems(Set<OrderItem> orderItems) {
+        this.items = orderItems;
     }
 
     public Set<Invoice> getInvoices() {

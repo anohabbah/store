@@ -9,7 +9,7 @@ export interface IProduct {
   size?: Size;
   imageContentType?: string;
   image?: any;
-  productCategory?: IProductCategory;
+  category?: IProductCategory;
 }
 
 export class Product implements IProduct {
@@ -21,6 +21,6 @@ export class Product implements IProduct {
     public size?: Size,
     public imageContentType?: string,
     public image?: any,
-    public productCategory?: IProductCategory
+    public category?: IProductCategory
   ) {}
 }

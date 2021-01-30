@@ -35,7 +35,7 @@ export class ProductUpdatePage {
   sizeSelect = element(by.id('field_size'));
   imageInput = element(by.id('file_image'));
 
-  productCategorySelect = element(by.id('field_productCategory'));
+  categorySelect = element(by.id('field_category'));
 
   async getPageTitle(): Promise<string> {
     return this.pageTitle.getAttribute('jhiTranslate');
@@ -85,20 +85,20 @@ export class ProductUpdatePage {
     return await this.imageInput.getAttribute('value');
   }
 
-  async productCategorySelectLastOption(): Promise<void> {
-    await this.productCategorySelect.all(by.tagName('option')).last().click();
+  async categorySelectLastOption(): Promise<void> {
+    await this.categorySelect.all(by.tagName('option')).last().click();
   }
 
-  async productCategorySelectOption(option: string): Promise<void> {
-    await this.productCategorySelect.sendKeys(option);
+  async categorySelectOption(option: string): Promise<void> {
+    await this.categorySelect.sendKeys(option);
   }
 
-  getProductCategorySelect(): ElementFinder {
-    return this.productCategorySelect;
+  getCategorySelect(): ElementFinder {
+    return this.categorySelect;
   }
 
-  async getProductCategorySelectedOption(): Promise<string> {
-    return await this.productCategorySelect.element(by.css('option:checked')).getText();
+  async getCategorySelectedOption(): Promise<string> {
+    return await this.categorySelect.element(by.css('option:checked')).getText();
   }
 
   async save(): Promise<void> {
