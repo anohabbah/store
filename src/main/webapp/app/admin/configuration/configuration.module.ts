@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { StoreSharedModule } from 'app/shared/shared.module';
+import { StoreSharedModule } from '@store/shared/shared.module';
 
 import { ConfigurationComponent } from './configuration.component';
 

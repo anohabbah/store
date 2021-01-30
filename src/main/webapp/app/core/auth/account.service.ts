@@ -5,10 +5,10 @@ import { JhiLanguageService } from 'ng-jhipster';
 import { SessionStorageService } from 'ngx-webstorage';
 import { Observable, ReplaySubject, of } from 'rxjs';
 import { shareReplay, tap, catchError } from 'rxjs/operators';
-import { StateStorageService } from 'app/core/auth/state-storage.service';
+import { StateStorageService } from '@store/core/auth/state-storage.service';
 
-import { SERVER_API_URL } from 'app/app.constants';
-import { Account } from 'app/core/user/account.model';
+import { SERVER_API_URL } from '@store/app.constants';
+import { Account } from '@store/core/user/account.model';
 import { TrackerService } from '../tracker/tracker.service';
 
 @Injectable({ providedIn: 'root' })
