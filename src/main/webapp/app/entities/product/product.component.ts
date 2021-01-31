@@ -24,6 +24,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   predicate!: string;
   ascending!: boolean;
   ngbPaginationPage = 1;
+  filter: string = '';
 
   constructor(
     protected productService: ProductService,
@@ -109,7 +110,7 @@ export class ProductComponent implements OnInit, OnDestroy {
     this.totalItems = Number(headers.get('X-Total-Count'));
     this.page = page;
     if (navigate) {
-      this.router.navigate(['/product'], {
+      this.router.navigate(['/products'], {
         queryParams: {
           page: this.page,
           size: this.itemsPerPage,
