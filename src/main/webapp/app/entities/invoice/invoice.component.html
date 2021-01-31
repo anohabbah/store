@@ -59,6 +59,7 @@
                             </button>
 
                             <button type="submit"
+                                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
                                     [routerLink]="['/invoice', invoice.id, 'edit']"
                                     class="btn btn-primary btn-sm">
                                 <fa-icon icon="pencil-alt"></fa-icon>
@@ -66,6 +67,7 @@
                             </button>
 
                             <button type="submit" (click)="delete(invoice)"
+                                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
                                     class="btn btn-danger btn-sm">
                                 <fa-icon icon="times"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>

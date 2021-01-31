@@ -1,28 +1,28 @@
 entity Customer (costumers) {
-  firstName String required,
-  lastName String required,
-  gender Gender required,
-  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/),
-  phone String required,
-  addressLine1 String required,
-  addressLine2 String,
-  city String required,
+  firstName String required
+  lastName String required
+  gender Gender required
+  email String required pattern(/^[^@\s]+@[^@\s]+\.[^@\s]+$/)
+  phone String required
+  addressLine1 String required
+  addressLine2 String
+  city String required
   country String required
 }
 
 entity Invoice (invoices) {
-  date Instant required,
-  details String,
-  status InvoiceStatus required,
-  paymentMethod PaymentMethod required,
-  paymentDate Instant required,
-  paymentAmount Integer required,
+  date Instant required
+  details String
+  status InvoiceStatus required
+  paymentMethod PaymentMethod required
+  paymentDate Instant required
+  paymentAmount Integer required
   code String required
 }
 
 entity OrderItem (order_items) {
-  quantity Integer required min(0),
-  totalPrice Integer required min(0),
+  quantity Integer required min(0)
+  totalPrice Integer required min(0)
   status OrderItemStatus required
 }
 
@@ -30,64 +30,64 @@ entity OrderItem (order_items) {
  * Product sold by the online store
  */
 entity Product (products) {
-  name String required,
-  description String,
-  price Integer required min(0),
-  size Size required,
+  name String required
+  description String
+  price Integer required min(0)
+  size Size required
   image ImageBlob
 }
 
 entity ProductCategory (product_categories) {
-  name String required,
+  name String required
   description String
 }
 
 entity ProductOrder (product_orders) {
-  placedDate Instant required,
-  status OrderStatus required,
+  placedDate Instant required
+  status OrderStatus required
   code String required
 }
 
 entity Shipment (shipments) {
-  trackingCode String,
-  date Instant required,
+  trackingCode String
+  date Instant required
   details String
 }
 
 enum Gender {
-  MALE,
-  FEMALE,
+  MALE
+  FEMALE
   OTHER
 }
 
 enum InvoiceStatus {
-  PAID,
-  ISSUED,
+  PAID
+  ISSUED
   CANCELLED
 }
 
 enum PaymentMethod {
-  CREDIT_CARD,
-  CASH_ON_DELIVERY,
+  CREDIT_CARD
+  CASH_ON_DELIVERY
   PAYPAL
 }
 
 enum OrderItemStatus {
-  AVAILABLE,
-  OUT_OF_STOCK,
+  AVAILABLE
+  OUT_OF_STOCK
   BACK_ORDER
 }
 
 enum Size {
-  S,
-  L,
-  XL,
+  S
+  L
+  XL
   XXL
 }
 
 enum OrderStatus {
-  COMPLETED,
-  PENDING,
+  COMPLETED
+  PENDING
   CANCELED
 }
 
@@ -96,10 +96,10 @@ relationship OneToOne {
 }
 
 relationship OneToMany {
-  ProductOrder{invoice} to Invoice{order(code) required},
-  ProductOrder{item} to OrderItem{order(code) required},
-  ProductCategory{product} to Product{category(name)},
-  Customer{order} to ProductOrder{customer(email) required},
+  ProductOrder{invoice} to Invoice{order(code) required}
+  ProductOrder{item} to OrderItem{order(code) required}
+  ProductCategory{product} to Product{category(name)}
+  Customer{order} to ProductOrder{customer(email) required}
   Invoice{shipment} to Shipment{invoice(code) required}
 }
 
