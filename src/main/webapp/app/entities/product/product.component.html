@@ -74,7 +74,7 @@
                             </a>
                             <small *ngIf="product.category">
                                 <a [routerLink]="['/product-categories', product.category?.id, 'view']">
-                                    Category: {{ product.category?.id }}
+                                    Category: {{ product.category?.name }}
                                 </a>
                             </small>
                         </div>
