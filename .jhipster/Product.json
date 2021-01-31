@@ -41,7 +41,7 @@
       "otherEntityName": "productCategory",
       "otherEntityRelationshipName": "product",
       "relationshipName": "category",
-      "otherEntityField": "id"
+      "otherEntityField": "name"
     }
   ],
   "changelogDate": "20210130121347",

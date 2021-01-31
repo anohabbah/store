@@ -46,7 +46,7 @@
                 </dd>
                 <dt><span jhiTranslate="storeApp.customer.user">User</span></dt>
                 <dd>
-                    {{ customer.user?.id }}
+                    {{ customer.user?.login }}
                 </dd>
             </dl>
 
@@ -57,7 +57,7 @@
             </button>
 
             <button type="button"
-                    [routerLink]="['/customers', customer.id, 'edit']"
+                    [routerLink]="['/customer', customer.id, 'edit']"
                     class="btn btn-primary">
                 <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
             </button>

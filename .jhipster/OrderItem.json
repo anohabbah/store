@@ -40,8 +40,9 @@
       "relationshipType": "many-to-one",
       "otherEntityName": "productOrder",
       "otherEntityRelationshipName": "item",
+      "relationshipValidateRules": "required",
       "relationshipName": "order",
-      "otherEntityField": "id"
+      "otherEntityField": "code"
     }
   ],
   "changelogDate": "20210130121747",

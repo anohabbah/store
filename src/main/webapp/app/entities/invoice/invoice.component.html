@@ -2,7 +2,7 @@
     <h2 id="page-heading">
         <span jhiTranslate="storeApp.invoice.home.title">Invoices</span>
 
-        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-invoice" [routerLink]="['/invoices/new']">
+        <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-invoice" [routerLink]="['/invoice/new']">
             <fa-icon icon="plus"></fa-icon>
             <span  jhiTranslate="storeApp.invoice.home.createLabel">
             Create a new Invoice
@@ -29,35 +29,37 @@
                     <th scope="col"  jhiSortBy="paymentMethod"><span jhiTranslate="storeApp.invoice.paymentMethod">Payment Method</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="paymentDate"><span jhiTranslate="storeApp.invoice.paymentDate">Payment Date</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"  jhiSortBy="paymentAmount"><span jhiTranslate="storeApp.invoice.paymentAmount">Payment Amount</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="order.id"><span jhiTranslate="storeApp.invoice.order">Order</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="code"><span jhiTranslate="storeApp.invoice.code">Code</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="order.code"><span jhiTranslate="storeApp.invoice.order">Order</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let invoice of invoices ;trackBy: trackId">
-                    <td><a [routerLink]="['/invoices', invoice.id, 'view']">{{ invoice.id }}</a></td>
+                    <td><a [routerLink]="['/invoice', invoice.id, 'view']">{{ invoice.id }}</a></td>
                     <td>{{ invoice.date | date:'medium' }}</td>
                     <td>{{ invoice.details }}</td>
                     <td jhiTranslate="{{ 'storeApp.InvoiceStatus.' + invoice.status }}">{{ invoice.status }}</td>
                     <td jhiTranslate="{{ 'storeApp.PaymentMethod.' + invoice.paymentMethod }}">{{ invoice.paymentMethod }}</td>
                     <td>{{ invoice.paymentDate | date:'medium' }}</td>
                     <td>{{ invoice.paymentAmount }}</td>
+                    <td>{{ invoice.code }}</td>
                     <td>
                         <div *ngIf="invoice.order">
-                            <a [routerLink]="['/orders', invoice.order?.id, 'view']" >{{ invoice.order?.id }}</a>
+                            <a [routerLink]="['/product-order', invoice.order?.id, 'view']" >{{ invoice.order?.code }}</a>
                         </div>
                     </td>
                     <td class="text-right">
                         <div class="btn-group">
                             <button type="submit"
-                                    [routerLink]="['/invoices', invoice.id, 'view']"
+                                    [routerLink]="['/invoice', invoice.id, 'view']"
                                     class="btn btn-info btn-sm">
                                 <fa-icon icon="eye"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
                             </button>
 
                             <button type="submit"
-                                    [routerLink]="['/invoices', invoice.id, 'edit']"
+                                    [routerLink]="['/invoice', invoice.id, 'edit']"
                                     class="btn btn-primary btn-sm">
                                 <fa-icon icon="pencil-alt"></fa-icon>
                                 <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>

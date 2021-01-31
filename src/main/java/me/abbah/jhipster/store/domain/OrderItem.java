@@ -44,7 +44,8 @@ public class OrderItem implements Serializable {
     @JsonIgnoreProperties(value = "orderItems", allowSetters = true)
     private Product product;
 
-    @ManyToOne
+    @ManyToOne(optional = false)
+    @NotNull
     @JsonIgnoreProperties(value = "items", allowSetters = true)
     private ProductOrder order;
 

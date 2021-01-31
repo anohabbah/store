@@ -32,10 +32,14 @@
                 <dd>
                     <span>{{ invoice.paymentAmount }}</span>
                 </dd>
+                <dt><span jhiTranslate="storeApp.invoice.code">Code</span></dt>
+                <dd>
+                    <span>{{ invoice.code }}</span>
+                </dd>
                 <dt><span jhiTranslate="storeApp.invoice.order">Order</span></dt>
                 <dd>
                     <div *ngIf="invoice.order">
-                        <a [routerLink]="['/orders', invoice.order?.id, 'view']">{{ invoice.order?.id }}</a>
+                        <a [routerLink]="['/product-order', invoice.order?.id, 'view']">{{ invoice.order?.code }}</a>
                     </div>
                 </dd>
             </dl>
@@ -47,7 +51,7 @@
             </button>
 
             <button type="button"
-                    [routerLink]="['/invoices', invoice.id, 'edit']"
+                    [routerLink]="['/invoice', invoice.id, 'edit']"
                     class="btn btn-primary">
                 <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
             </button>

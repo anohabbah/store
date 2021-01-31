@@ -2,6 +2,7 @@ package me.abbah.jhipster.store.web.rest;
 
 import me.abbah.jhipster.store.StoreApp;
 import me.abbah.jhipster.store.domain.OrderItem;
+import me.abbah.jhipster.store.domain.ProductOrder;
 import me.abbah.jhipster.store.repository.OrderItemRepository;
 import me.abbah.jhipster.store.service.OrderItemService;
 
@@ -65,6 +66,16 @@ public class OrderItemResourceIT {
             .quantity(DEFAULT_QUANTITY)
             .totalPrice(DEFAULT_TOTAL_PRICE)
             .status(DEFAULT_STATUS);
+        // Add required entity
+        ProductOrder productOrder;
+        if (TestUtil.findAll(em, ProductOrder.class).isEmpty()) {
+            productOrder = ProductOrderResourceIT.createEntity(em);
+            em.persist(productOrder);
+            em.flush();
+        } else {
+            productOrder = TestUtil.findAll(em, ProductOrder.class).get(0);
+        }
+        orderItem.setOrder(productOrder);
         return orderItem;
     }
     /**
@@ -78,6 +89,16 @@ public class OrderItemResourceIT {
             .quantity(UPDATED_QUANTITY)
             .totalPrice(UPDATED_TOTAL_PRICE)
             .status(UPDATED_STATUS);
+        // Add required entity
+        ProductOrder productOrder;
+        if (TestUtil.findAll(em, ProductOrder.class).isEmpty()) {
+            productOrder = ProductOrderResourceIT.createUpdatedEntity(em);
+            em.persist(productOrder);
+            em.flush();
+        } else {
+            productOrder = TestUtil.findAll(em, ProductOrder.class).get(0);
+        }
+        orderItem.setOrder(productOrder);
         return orderItem;
     }
 

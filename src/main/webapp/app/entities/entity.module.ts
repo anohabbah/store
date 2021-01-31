@@ -25,7 +25,7 @@ import { RouterModule } from '@angular/router';
         loadChildren: () => import('./order-item/order-item.module').then(m => m.StoreOrderItemModule),
       },
       {
-        path: 'invoice',
+        path: 'invoices',
         loadChildren: () => import('./invoice/invoice.module').then(m => m.StoreInvoiceModule),
       },
       {
@@ -33,20 +33,36 @@ import { RouterModule } from '@angular/router';
         loadChildren: () => import('./shipment/shipment.module').then(m => m.StoreShipmentModule),
       },
       {
-        path: 'product',
+        path: 'products',
         loadChildren: () => import('./product/product.module').then(m => m.StoreProductModule),
       },
       {
-        path: 'product-category',
+        path: 'product-categories',
         loadChildren: () => import('./product-category/product-category.module').then(m => m.StoreProductCategoryModule),
+      },
+      {
+        path: 'orders',
+        loadChildren: () => import('./product-order/product-order.module').then(m => m.StoreProductOrderModule),
+      },
+      {
+        path: 'order-item',
+        loadChildren: () => import('./order-item/order-item.module').then(m => m.StoreOrderItemModule),
+      },
+      {
+        path: 'invoice',
+        loadChildren: () => import('./invoice/invoice.module').then(m => m.StoreInvoiceModule),
+      },
+      {
+        path: 'customer',
+        loadChildren: () => import('./customer/customer.module').then(m => m.StoreCustomerModule),
       },
       {
         path: 'product-order',
         loadChildren: () => import('./product-order/product-order.module').then(m => m.StoreProductOrderModule),
       },
       {
-        path: 'order-item',
-        loadChildren: () => import('./order-item/order-item.module').then(m => m.StoreOrderItemModule),
+        path: 'shipment',
+        loadChildren: () => import('./shipment/shipment.module').then(m => m.StoreShipmentModule),
       },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
