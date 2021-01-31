@@ -35,5 +35,6 @@ function mapTypescriptAliasToWebpackAlias(alias = {}) {
       aliases[key] = value;
       return aliases;
     }, webpackAliases);
-  return webpackAliases;
+    console.log('Webpack Utils [mapTypescriptAliasToWebpackAlias]', webpackAliases, tsconfig.compilerOptions.paths);
+    return webpackAliases;
 }
