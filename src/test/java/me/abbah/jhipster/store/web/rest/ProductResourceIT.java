@@ -29,7 +29,7 @@ import me.abbah.jhipster.store.domain.enumeration.Size;
  */
 @SpringBootTest(classes = StoreApp.class)
 @AutoConfigureMockMvc
-@WithMockUser
+@WithMockUser(username = "admin", password = "admin", authorities = {"ROLE_ADMIN"})
 public class ProductResourceIT {
 
     private static final String DEFAULT_NAME = "AAAAAAAAAA";
@@ -218,7 +218,7 @@ public class ProductResourceIT {
             .andExpect(jsonPath("$.[*].imageContentType").value(hasItem(DEFAULT_IMAGE_CONTENT_TYPE)))
             .andExpect(jsonPath("$.[*].image").value(hasItem(Base64Utils.encodeToString(DEFAULT_IMAGE))));
     }
-    
+
     @Test
     @Transactional
     public void getProduct() throws Exception {

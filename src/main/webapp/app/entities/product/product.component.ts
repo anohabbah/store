@@ -24,7 +24,7 @@ export class ProductComponent implements OnInit, OnDestroy {
   predicate!: string;
   ascending!: boolean;
   ngbPaginationPage = 1;
-  filter: string = '';
+  filter = '';
 
   constructor(
     protected productService: ProductService,
@@ -55,7 +55,7 @@ export class ProductComponent implements OnInit, OnDestroy {
     this.registerChangeInProducts();
   }
 
-  protected handleNavigation(): void {
+  handleNavigation(): void {
     combineLatest(this.activatedRoute.data, this.activatedRoute.queryParamMap, (data: Data, params: ParamMap) => {
       const page = params.get('page');
       const pageNumber = page !== null ? +page : 1;

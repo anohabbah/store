@@ -32,7 +32,7 @@ import me.abbah.jhipster.store.domain.enumeration.PaymentMethod;
  */
 @SpringBootTest(classes = StoreApp.class)
 @AutoConfigureMockMvc
-@WithMockUser
+@WithMockUser(username = "admin", password = "admin", authorities = {"ROLE_ADMIN"})
 public class InvoiceResourceIT {
 
     private static final Instant DEFAULT_DATE = Instant.ofEpochMilli(0L);
@@ -306,7 +306,7 @@ public class InvoiceResourceIT {
             .andExpect(jsonPath("$.[*].paymentAmount").value(hasItem(DEFAULT_PAYMENT_AMOUNT)))
             .andExpect(jsonPath("$.[*].code").value(hasItem(DEFAULT_CODE)));
     }
-    
+
     @Test
     @Transactional
     public void getInvoice() throws Exception {
